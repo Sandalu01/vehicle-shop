@@ -1,14 +1,14 @@
-import React from 'react'; // Ensure React is imported at the top
+import React from 'react'; 
 
 const SearchBar = ({ searchTerm, onChange }) => {
   return (
     <div className="search-bar">
       <input
         type="text"
-        className="search-input" // Add a class for custom styling
+        className="search-input" 
         placeholder="Search vehicles..."
         value={searchTerm}
-        onChange={(e) => onChange(e.target.value)} // Ensure the correct value is passed
+        onChange={(e) => onChange(e.target.value)} 
       />
     </div>
   );
