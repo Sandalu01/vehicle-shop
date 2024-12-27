@@ -27,6 +27,9 @@ const Header = () => {
                   <Nav.Link href="/contact" className="text-white hover-effect d-flex align-items-center">
                       Contact
                   </Nav.Link>
+                  <Nav.Link href="/login" className="text-white hover-effect d-flex align-items-center">
+                      Login
+                  </Nav.Link>
                 </Nav>
               </Navbar.Collapse>
             </Navbar>
