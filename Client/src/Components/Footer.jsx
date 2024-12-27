@@ -10,9 +10,9 @@ const Footer = () => {
           {/* Column 1: Contact Information */}
           <Col md={6} className="mb-3">
             <h5 className="text-uppercase fw-bold">Contact Us</h5>
-            <p>Phone: +1 (234) 567-890</p>
-            <p>Email: support@vehiclesell.com</p>
-            <p>Address: 123 Vehicle St, City, Country</p>
+            <p>Phone: +94 (76) 1136-338</p>
+            <p>Email: Sandalu@AutoVista.com</p>
+            <p>Address: Thalawa, Anuradhapuara, Sri Lanaka</p>
           </Col>
 
           {/* Column 2: Social Media */}
