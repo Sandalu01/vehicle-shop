@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import VehicleList from '../components/VehicleList';
+import VehicleList from '../Components/VehicleDetail';
 import SearchBar from '../Components/SearchBar'
-import vehicleService from '../services/vehicleService';
+import vehicleService from '../Services/vehicleService';
 
 const VehiclePage = () => {
   const [vehicles, setVehicles] = useState([]);
