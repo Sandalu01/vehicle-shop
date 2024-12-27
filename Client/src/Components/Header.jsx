@@ -1,65 +1,40 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Navbar, Nav } from 'react-bootstrap';
+import { FaHome, FaInfoCircle, FaCar, FaEnvelope } from 'react-icons/fa';
 
-const Footer = () => {
+const Header = () => {
   return (
-    <footer className="bg-dark text-white py-4">
+    <header className="bg-black text-white py-3 apple-font">
       <Container>
         <Row>
-          {/* Column 1 */}
-          <Col md={4} className="mb-3">
-            <h5 className="text-uppercase fw-bold">Quick Links</h5>
-            <ul className="list-unstyled mt-3">
-              <li>
-                <a href="/" className="text-white text-decoration-none hover-effect">Home</a>
-              </li>
-              <li>
-                <a href="/about" className="text-white text-decoration-none hover-effect">About</a>
-              </li>
-              <li>
-                <a href="/vehicles" className="text-white text-decoration-none hover-effect">Vehicles</a>
-              </li>
-              <li>
-                <a href="/contact" className="text-white text-decoration-none hover-effect">Contact</a>
-              </li>
-            </ul>
-          </Col>
-
-          {/* Column 2 */}
-          <Col md={4} className="mb-3">
-            <h5 className="text-uppercase fw-bold">Contact Us</h5>
-            <p className="mt-3">
-              Email: <a href="mailto:info@example.com" className="text-white text-decoration-none">info@example.com</a>
-            </p>
-            <p>Phone: +1 123 456 7890</p>
-            <p>Address: 123 Main Street, Anytown, USA</p>
-          </Col>
-
-          {/* Column 3 */}
-          <Col md={4} className="mb-3">
-            <h5 className="text-uppercase fw-bold">Follow Us</h5>
-            <div className="d-flex mt-3">
-              <a href="#" className="text-white me-3 hover-effect">
-                <i className="bi bi-facebook"></i> Facebook
-              </a>
-              <a href="#" className="text-white me-3 hover-effect">
-                <i className="bi bi-twitter"></i> Twitter
-              </a>
-              <a href="#" className="text-white hover-effect">
-                <i className="bi bi-instagram"></i> Instagram
-              </a>
-            </div>
+          <Col>
+            <Navbar expand="lg" className="navbar-dark">
+              <Navbar.Brand href="/" className="">
+                <span className="me-2"></span> Sheer Driving Pleasure
+              </Navbar.Brand>
+              <Navbar.Toggle aria-controls="navbarNav" />
+              <Navbar.Collapse id="navbarNav">
+                <Nav className="ms-auto">
+                  <Nav.Link href="/" className="text-white hover-effect d-flex align-items-center">
+                    Home
+                  </Nav.Link>
+                  <Nav.Link href="/about" className="text-white hover-effect d-flex align-items-center">
+                    About
+                  </Nav.Link>
+                  <Nav.Link href="/vehicles" className="text-white hover-effect d-flex align-items-center">
+                   Vehicles
+                  </Nav.Link>
+                  <Nav.Link href="/contact" className="text-white hover-effect d-flex align-items-center">
+                      Contact
+                  </Nav.Link>
+                </Nav>
+              </Navbar.Collapse>
+            </Navbar>
           </Col>
         </Row>
-
-        <hr className="border-secondary my-4" />
-
-        <div className="text-center">
-          © {new Date().getFullYear()} Vehicle Selling Website. All rights reserved.
-        </div>
       </Container>
-    </footer>
+    </header>
   );
 };
 
-export default Footer;
+export default Header;
