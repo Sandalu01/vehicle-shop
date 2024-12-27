@@ -74,15 +74,15 @@ const ContactPage = () => {
           <Row>
             <Col md={4} className="text-center">
               <h5 className="fw-bold">Email</h5>
-              <p>info@example.com</p>
+              <p>Sandaluo@AutoVista.com</p>
             </Col>
             <Col md={4} className="text-center">
               <h5 className="fw-bold">Phone</h5>
-              <p>+1 123 456 7890</p>
+              <p>+94 76 1136338</p>
             </Col>
             <Col md={4} className="text-center">
               <h5 className="fw-bold">Address</h5>
-              <p>123 Main Street, Anytown, USA</p>
+              <p>Thalawa, Anuradhapuara, Sri Lanaka</p>
             </Col>
           </Row>
         </Container>
