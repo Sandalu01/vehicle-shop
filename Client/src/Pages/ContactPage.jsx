@@ -74,7 +74,7 @@ const ContactPage = () => {
           <Row>
             <Col md={4} className="text-center">
               <h5 className="fw-bold">Email</h5>
-              <p>Sandaluo@AutoVista.com</p>
+              <p>Sandalu@AutoVista.com</p>
             </Col>
             <Col md={4} className="text-center">
               <h5 className="fw-bold">Phone</h5>
