@@ -14,7 +14,12 @@ const VehiclePage = () => {
     vehicle.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
+  //you have to pass the data from the mongodb service for api compatibility
+
   return (
+    <>
+
+  
     <div>
       {/* Hero Section */}
       <div className="bg-primary text-white text-center py-5">
@@ -73,6 +78,11 @@ const VehiclePage = () => {
         )}
       </Container>
     </div>
+      <div className="bg-secondary text-white text-center py-5">
+      <h2>Ready to Find Your Perfect Vehicle?</h2>
+      <p className="mt-3">Browse our inventory and drive away in your dream car today!</p>
+    </div>
+    </>
   );
 };
 

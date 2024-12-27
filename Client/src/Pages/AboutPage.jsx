@@ -78,6 +78,6 @@ const AboutPage = () => {
     </div>
   );
 };
-
+c
 export default AboutPage;
  

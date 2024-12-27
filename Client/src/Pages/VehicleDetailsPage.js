@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Container, Row, Col, Spinner, Card, Button } from 'react-bootstrap';
-import vehicleService from '../services/vehicleService';
 
 const VehicleDetailsPage = () => {
   const { id } = useParams();
