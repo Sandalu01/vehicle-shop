@@ -36,7 +36,7 @@ const Footer = () => {
 
         {/* Bottom Text */}
         <div className="text-center">
-          © {new Date().getFullYear()} Vehicle Selling App. All rights reserved.
+          © {new Date().getFullYear()} | AutoVista. All rights reserved.
         </div>
       </Container>
     </footer>
