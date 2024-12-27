@@ -52,12 +52,18 @@ const LoginPage = () => {
         <Container>
           <Row>
             <Col className="text-center">
-              <p>
-                Don't have an account? <a href="/AuthPage" className="text-white fw-bold">Sign up here</a>.
-              </p>
-              <p>
-                Forgot your password? <a href="/forgot-password" className="text-white fw-bold">Reset it</a>.
-              </p>
+            <p>
+  Don't have an account?{' '}
+  <Link to="/AuthPage" className="text-white fw-bold">
+    Sign up here
+  </Link>.
+</p>
+<p>
+  Forgot your password?{' '}
+  <Link to="/forgot-password" className="text-white fw-bold">
+    Reset it
+  </Link>.
+</p>
             </Col>
           </Row>
         </Container>
