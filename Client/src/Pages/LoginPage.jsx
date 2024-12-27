@@ -53,7 +53,7 @@ const LoginPage = () => {
           <Row>
             <Col className="text-center">
               <p>
-                Don't have an account? <a href="/signup" className="text-white fw-bold">Sign up here</a>.
+                Don't have an account? <a href="/AuthPage" className="text-white fw-bold">Sign up here</a>.
               </p>
               <p>
                 Forgot your password? <a href="/forgot-password" className="text-white fw-bold">Reset it</a>.
