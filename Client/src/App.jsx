@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
-import VehiclePage from './pages/VehiclePage';
+import VehiclePage from './Pages/VehiclePage';
 import VehicleDetailsPage from './pages/VehicleDetailsPage';
 import ContactPage from './pages/ContactPage';
 import Header from './components/Header';
