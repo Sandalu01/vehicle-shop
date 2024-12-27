@@ -55,7 +55,7 @@ const LoginPage = () => {
             <Col className="text-center">
             <p>
   Don't have an account?{' '}
-  <Link to="/AuthPage" className="text-white fw-bold">
+  <Link to="/signup" className="text-white fw-bold">
     Sign up here
   </Link>.
 </p>
