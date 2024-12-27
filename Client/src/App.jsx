@@ -1,34 +1,29 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
+import VehiclePage from './pages/VehiclePage';
+import VehicleDetailsPage from './pages/VehicleDetailsPage';
+import ContactPage from './pages/ContactPage';
+import Header from './components/Header';
+import Footer from './Components/Header';
 
-import AboutPage from "./Components/AboutPage";
-import SignUpForm from "./Components/SignUpPage";
-import LoginForm from "./Components/LoginPage";
-import HomePage from "./Components/HomePage";
-import NaviBar from "./Components/NaviBar";
-import Footer from "./Components/Footer";
-
-function App() {
-  const [count, setCount] = useState(0);
-
+const App = () => {
   return (
-    <>
-      <Router>
-        <NaviBar />
+    <Router>
+      <Header />
+      <main>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
-          <Route path="/login" element={<LoginForm />} />
-          <Route path="/Signup" element={<SignUpForm />} />
+          <Route path="/vehicles" element={<VehiclePage />} />
+          <Route path="/vehicles/:id" element={<VehicleDetailsPage />} />
+          <Route path="/contact" element={<ContactPage />} />
         </Routes>
-        <Footer />
-      </Router>
-    </>
+      </main>
+      <Footer />
+    </Router>
   );
-}
+};
 
 export default App;
