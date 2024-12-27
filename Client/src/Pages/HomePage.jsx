@@ -8,7 +8,7 @@ const HomePage = () => {
       {/* Hero Section */}
       <div className="text-center bg-primary text-white py-5">
         <Container>
-          <h1 className="display-4 fw-bold">Welcome to Vehicle Selling App</h1>
+          <h1 className="display-4 fw-bold">Find your Vehicle prices In sri lanaka</h1>
           <p className="lead mt-3">
             Discover a wide range of vehicles at the best prices. Find your dream car today!
           </p>

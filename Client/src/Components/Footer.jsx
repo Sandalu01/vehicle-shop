@@ -1,37 +1,33 @@
 import React from 'react';
 import { Container, Row, Col, Nav } from 'react-bootstrap';
+import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
 
 const Footer = () => {
   return (
     <footer className="bg-dark text-white py-4">
       <Container>
         <Row>
-          {/* Column 1 */}
-          <Col md={4} className="mb-3">
-            <h5 className="text-uppercase fw-bold">Quick Links</h5>
-            <Nav className="flex-column">
-              <Nav.Link href="/" className="text-white text-decoration-none hover-effect">Home</Nav.Link>
-              <Nav.Link href="/about" className="text-white text-decoration-none hover-effect">About</Nav.Link>
-              <Nav.Link href="/vehicles" className="text-white text-decoration-none hover-effect">Vehicles</Nav.Link>
-              <Nav.Link href="/contact" className="text-white text-decoration-none hover-effect">Contact</Nav.Link>
-            </Nav>
-          </Col>
-
-          {/* Column 2 */}
-          <Col md={4} className="mb-3">
+          {/* Column 1: Contact Information */}
+          <Col md={6} className="mb-3">
             <h5 className="text-uppercase fw-bold">Contact Us</h5>
             <p>Phone: +1 (234) 567-890</p>
             <p>Email: support@vehiclesell.com</p>
             <p>Address: 123 Vehicle St, City, Country</p>
           </Col>
 
-          {/* Column 3 */}
-          <Col md={4} className="mb-3">
+          {/* Column 2: Social Media */}
+          <Col md={6} className="mb-3 text-md-end text-center">
             <h5 className="text-uppercase fw-bold">Follow Us</h5>
-            <Nav>
-              <Nav.Link href="#" className="text-white text-decoration-none me-2">Facebook</Nav.Link>
-              <Nav.Link href="#" className="text-white text-decoration-none me-2">Twitter</Nav.Link>
-              <Nav.Link href="#" className="text-white text-decoration-none me-2">Instagram</Nav.Link>
+            <Nav className="justify-content-md-end justify-content-center">
+              <Nav.Link href="#" className="text-white me-3">
+                <FaFacebook size={24} />
+              </Nav.Link>
+              <Nav.Link href="#" className="text-white me-3">
+                <FaTwitter size={24} />
+              </Nav.Link>
+              <Nav.Link href="#" className="text-white">
+                <FaInstagram size={24} />
+              </Nav.Link>
             </Nav>
           </Col>
         </Row>
