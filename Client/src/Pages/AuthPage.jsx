@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Form, Button, Tabs, Tab } from 'react-bootstrap';
-
+import { Link } from 'react-router-dom';
 const AuthPage = () => {
   return (
     <div className="bg-light text-dark">
@@ -116,9 +116,14 @@ const AuthPage = () => {
         <Container>
           <Row>
             <Col className="text-center">
-              <p>
-                Need help? <a href="/support" className="text-white fw-bold">Contact Support</a>.
-              </p>
+           
+<p>
+Need help? {' '}
+  <Link to="/contact" className="text-white fw-bold">
+  Contact Support
+  </Link>.
+</p>
+
             </Col>
           </Row>
         </Container>
