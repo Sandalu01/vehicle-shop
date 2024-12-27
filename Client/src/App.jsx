@@ -7,6 +7,7 @@ import VehicleDetailsPage from './Components/VehicleDetail';
 import ContactPage from './Pages/ContactPage';
 import Header from './Components/Header';
 import Footer from './Components/Footer'
+import LoginPage from './Pages/LoginPage';
 
 const App = () => {
   return (
@@ -19,6 +20,8 @@ const App = () => {
           <Route path="/vehicles" element={<VehiclePage />} />
           <Route path="/vehicles/:id" element={<VehicleDetailsPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/login" element={<LoginPage />} />
+
         </Routes>
       </main>
       <Footer />
