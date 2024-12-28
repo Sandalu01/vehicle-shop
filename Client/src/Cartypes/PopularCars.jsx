@@ -14,6 +14,12 @@ const popularCars = [
     description: 'A sporty compact car with advanced features.',
     price: '$22,000',
   },
+  {
+    name: 'Toyota vezel',
+    image: 'https://via.placeholder.com/300x200',
+    description: 'A sporty compact car with advanced features.',
+    price: '$22,000',
+  },
 ];
 
 const PopularCars = () => {

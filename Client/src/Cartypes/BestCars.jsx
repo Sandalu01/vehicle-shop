@@ -14,6 +14,12 @@ const bestCars = [
     description: 'An iconic muscle car with a powerful V8 engine.',
     price: '$55,000',
   },
+  {
+    name: 'Mercedes-Benz',
+    image: 'https://via.placeholder.com/300x200',
+    description: 'Benz, is a German luxury and commercial vehicle brand that was founded in 1926.',
+    price: '$55,000',
+  },
 ];
 
 const BestCars = () => {

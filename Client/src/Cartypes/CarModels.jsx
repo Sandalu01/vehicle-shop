@@ -14,6 +14,12 @@ const carModels = [
     description: 'A premium sedan with exceptional engineering.',
     price: '$45,000',
   },
+  {
+    name: 'Audi A4',
+    image: 'https://via.placeholder.com/300x200',
+    description: ' August Horch was prohibited from using horch as a trade name in his new car business, he called a meeting with close business friends, P.',
+    price: '$45,000',
+  },
 ];
 
 const CarModels = () => {
