@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Row, Col, Button } from 'react-bootstrap';
+import PopularCars from '../Cartypes/PopularCars';
+import BestCars from '../Cartypes/BestCars';
+import CarModels from '../Cartypes/CarModels';
 import '../styles/HomePage.css';
 
 const HomePage = () => {
@@ -42,6 +45,18 @@ const HomePage = () => {
           </Col>
         </Row>
       </Container>
+      <div className="vehicle-section bg-light py-5">
+      <Container>
+        {/* Popular Cars Section */}
+        <PopularCars />
+
+        {/* Best Cars Section */}
+        <BestCars />
+
+        {/* Car Models Section */}
+        <CarModels />
+      </Container>
+    </div>
 
       {/* Call-to-Action Section */}
       <div className="bg-secondary text-white text-center py-5">

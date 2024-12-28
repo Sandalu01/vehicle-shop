@@ -9,6 +9,9 @@ import Header from './Components/Header';
 import Footer from './Components/Footer'
 import LoginPage from './Pages/LoginPage';
 import AuthPage from './Pages/AuthPage';
+import PopularCars from './Cartypes/PopularCars';
+import BestCars from './Cartypes/BestCars';
+import CarModels from './Cartypes/CarModels';
 
 const App = () => {
   return (
@@ -23,8 +26,12 @@ const App = () => {
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<AuthPage />} />
+          <Route path="/best" element={<BestCars />} />
+          <Route path="/populer" element={<PopularCars />} />
+          <Route path="/model" element={<CarModels/>} />
         </Routes>
       </main>
+      
       <Footer />
     </Router>
   );
