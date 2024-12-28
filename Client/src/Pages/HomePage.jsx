@@ -5,6 +5,7 @@ import PopularCars from '../Cartypes/PopularCars';
 import BestCars from '../Cartypes/BestCars';
 import CarModels from '../Cartypes/CarModels';
 import '../styles/HomePage.css';
+import '../styles/commancard.css';
 
 const HomePage = () => {
   return (
