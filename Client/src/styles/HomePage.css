@@ -1,16 +1,21 @@
-.homepage {
-    text-align: center;
-    background-color: #f5f5f5;
-    padding: 20px;
+/* General Button Hover Effect */
+button:hover, .btn:hover {
+    background-color: #000000 !important; /* Change to your desired hover color */
+    color: #ffffff !important; /* Change text color on hover */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
   }
   
-  .homepage h1 {
-    color: #333;
-    font-size: 2.5rem;
+  /* Link Hover Effect */
+  a:hover {
+    text-decoration: underline;
+    color: #447ac6 !important; /* Change link hover color */
+    transition: color 0.3s ease, text-decoration 0.3s ease;
   }
   
-  .homepage p {
-    color: #555;
-    font-size: 1.2rem;
+  /* Icon Hover Effect */
+  .icon:hover {
+    color: #0056b3 !important; /* Change icon color on hover */
+    transform: scale(1.2); /* Slightly enlarge the icon on hover */
+    transition: transform 0.3s ease, color 0.3s ease;
   }
   
