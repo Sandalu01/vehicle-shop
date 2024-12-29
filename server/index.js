@@ -2,15 +2,13 @@ const express = require('express');
 const dotenv = require('dotenv');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const connectDB = require('./config/db');
-
+const connectDB = require('./config/database.js');
 dotenv.config();
 
 const app = express();
 
 // Connect to MongoDB
 connectDB();
-
 
 app.use(bodyParser.json());
 app.use(cors());
@@ -20,3 +18,6 @@ app.get('/', async (req, res) => {
 })
 
 console.log("Hello from node");
+
+const PORT = process.env.PORT || 5001;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
