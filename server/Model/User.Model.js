@@ -4,7 +4,7 @@ const bcrypt = require("bcrypt");
 const UserSchema = new mongoose.Schema(
     {
         user_name: {
-            type: String, // Missing type definition for name
+            type: String, 
             required: [true, "Please enter product name"]
         },
         email: {
