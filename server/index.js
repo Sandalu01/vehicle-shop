@@ -3,7 +3,7 @@ const dotenv = require('dotenv');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const connectDB = require('./config/database.js');
-
+const User = require('./Model/User.Model.js');
 
 const app = express();
 
@@ -19,17 +19,14 @@ app.get('/', async (req, res) => {
 console.log("Hello from node");
 
 
-
-//create schema and add new user schema
-
 app.post('/api/signup', async (req, res) => {
     try {
       
       //  const Product = await Product.create(req.body);
 
-      const { user_name, email, password } = req.body;
+      const { username, email, password } = req.body;
 
-      const newuser = new User({ user_name, email,password });
+      const newuser = new User({ username, email,password });
       const saved = await newuser.save();
 
 
