@@ -3,11 +3,12 @@ const dotenv = require('dotenv');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const connectDB = require('./config/database.js');
-dotenv.config();
+
+
+
 
 const app = express();
 
-// Connect to MongoDB
 connectDB();
 
 app.use(bodyParser.json());
