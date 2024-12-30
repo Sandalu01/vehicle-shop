@@ -1,13 +1,10 @@
 const User = require('../Model/User.Model');
 
 
-//add functions
 
-// Create a new product
 const createuser =   async (req, res) => {
     try {
       
-      //  const Product = await Product.create(req.body);
 
       const { username, email, password } = req.body;
 
