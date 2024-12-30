@@ -5,14 +5,10 @@ const Contact = require('../Model/Contact.Model.js');
 const ContactDetails =   async (req, res) => {
     try {
       
+      const { name, email, subject,message, } = req.body;
 
-      const { username, email, password } = req.body;
-
-      const newuser = new Contact({ username, email,password });
+      const newuser = new Contact({ name, email,subject,message,});
       const saved = await newuser.save();
-
-
-
       res.status(200).json(saved);
     
     } catch (error) {

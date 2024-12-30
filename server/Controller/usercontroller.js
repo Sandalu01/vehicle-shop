@@ -1,7 +1,5 @@
 const User = require('../Model/User.Model');
 
-
-
 const createuser =   async (req, res) => {
     try {
       
@@ -10,9 +8,6 @@ const createuser =   async (req, res) => {
 
       const newuser = new User({ username, email,password });
       const saved = await newuser.save();
-
-
-
       res.status(200).json(saved);
     
     } catch (error) {

@@ -29,8 +29,6 @@ app.post('/api/signup', async (req, res) => {
       const newuser = new User({ username, email,password });
       const saved = await newuser.save();
 
-
-
       res.status(200).json(saved);
     
     } catch (error) {
@@ -40,3 +38,4 @@ app.post('/api/signup', async (req, res) => {
 
 const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
