@@ -3,13 +3,13 @@ import dotenv from 'dotenv';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import {connectDB} from './DB/connectDB.js';
-import User from './Model/User.Model.js';
-import Contact from './Model/Contact.Model.js';
 
-const app = express();
+dotenv.config();
 
+dotenv.config();  // it reads the.env file and sets the environment variables.
 
-connectDB();
+const app  = express();
+const PORT = process.env.PORT ||5001;
 
 app.use(bodyParser.json());
 app.use(cors());
@@ -21,42 +21,12 @@ app.get('/', async (req, res) => {
 console.log("Hello from node");
 
 
-app.post('/api/signup', async (req, res) => {
-    try {
-      
-        //  const Product = await Product.create(req.body);
-
-      const { username, email, password } = req.body;
-
-      const newuser = new User({ username, email,password });
-      const saved = await newuser.save();
-
-      res.status(200).json(saved);
-    
-    } catch (error) {
-      res.status(500).json({ message: error.message });
-    }
-  });
+app.post('/api/signup', );
 
 
 
-  app.post('/api/contact', async (req, res) => {
-    try {
-      
-
-      const { name, email, subject,message } = req.body;
-
-      const userconatct = new Contact({ name, email,subject,message });
-      const saved = await userconatct.save();
-
-      res.status(200).json(saved);
-    
-    } catch (error) {
-      res.status(500).json({ message: error.message });
-    }
-  });
-
-
-const PORT = process.env.PORT || 5001;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+app.listen(PORT,()=>{
+  connectDB();
+  console.log("server is running on port :",PORT);
+});
 

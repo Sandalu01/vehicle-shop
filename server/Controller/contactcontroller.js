@@ -4,7 +4,6 @@ const createdetails = async (req, res) => {
   try {
     const { name, email, subject, message } = req.body;
 
-    
     const newContact = new Contact({ name, email, subject, message });
 
     const saved = await newContact.save();
