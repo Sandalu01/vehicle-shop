@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import {connectDB} from './DB/connectDB.js';
+import contactroute from './routers/contact.route.js';
 
 dotenv.config();
 
@@ -21,7 +22,7 @@ app.get('/', async (req, res) => {
 console.log("Hello from node");
 
 
-app.post('/api/signup', );
+app.use('api/',contactroute );
 
 
 
