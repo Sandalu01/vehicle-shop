@@ -1,11 +1,13 @@
-const express = require('express');
-const dotenv = require('dotenv');
-const bodyParser = require('body-parser');
-const cors = require('cors');
-const connectDB = require('./config/database.js');
-const User = require('./Model/User.Model.js');
-const Contact = require('./Model/Contact.Model.js');
+import express from 'express';
+import dotenv from 'dotenv';
+import bodyParser from 'body-parser';
+import cors from 'cors';
+import connectDB from './config/database.js';
+import User from './Model/User.Model.js';
+import Contact from './Model/Contact.Model.js';
+
 const app = express();
+
 
 connectDB();
 

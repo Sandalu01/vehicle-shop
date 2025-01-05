@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 const contactSchema = new mongoose.Schema({
   name: {
@@ -12,7 +12,6 @@ const contactSchema = new mongoose.Schema({
     trim: true,
     match: /.+\@.+\..+/,
   },
-  
   subject: {
     type: String,
     required: true,
@@ -29,7 +28,6 @@ const contactSchema = new mongoose.Schema({
   },
 });
 
-
+// Export the model as the default export
 const Contact = mongoose.model('Contact', contactSchema);
-
-module.exports = Contact;
+export default Contact;
