@@ -1,6 +1,6 @@
 import Contact from '../Model/Contact.Model.js';
 
-const ContactDetails = async (req, res) => {
+const createdetails = async (req, res) => {
   try {
     const { name, email, subject, message } = req.body;
 
@@ -18,4 +18,4 @@ const ContactDetails = async (req, res) => {
 };
 
 
-export default ContactDetails;
+export default createdetails;
