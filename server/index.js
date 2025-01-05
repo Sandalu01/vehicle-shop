@@ -2,7 +2,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import bodyParser from 'body-parser';
 import cors from 'cors';
-import connectDB from './config/database.js';
+import connectDB from './DB/connectDB.js';
 import User from './Model/User.Model.js';
 import Contact from './Model/Contact.Model.js';
 
