@@ -5,9 +5,6 @@ import cors from 'cors';
 import {connectDB} from './DB/connectDB.js';
 import contactroute from './routers/contact.route.js';
 import authroutes from "./routers/auth.route.js";
-
-
-
 dotenv.config();  // it reads the.env file and sets the environment variables.
 
 const app  = express();
