@@ -1,7 +1,7 @@
 
 
 import bcryptjs from "bcryptjs";
-
+import { generateTokenAndSetCookie } from "../utils/generateTokenAndSetCookie.js";
 
 import {
 

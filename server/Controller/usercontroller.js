@@ -1,4 +1,5 @@
 import User from '../Model/User.Model.js';
+import { generateTokenAndSetCookie } from "../utils/generateTokenAndSetCookie.js";
 
 const createUser = async (req, res) => {
   try {
