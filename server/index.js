@@ -4,6 +4,7 @@ import bodyParser from 'body-parser';
 import cors from 'cors';
 import {connectDB} from './DB/connectDB.js';
 import contactroute from './routers/contact.route.js';
+import authroutes from "./routers/contact.route.js";
 
 dotenv.config();
 
@@ -24,6 +25,7 @@ console.log("Hello from node");
 
 app.use('/api',contactroute );
 
+app.use("/api/auth",authroutes);
 
 
 app.listen(PORT,()=>{
