@@ -1,6 +1,6 @@
-import Contact from '../Model/Contact.Model.js';
+import {Contact} from '../Model/Contact.Model.js';
 
-const createdetails = async (req, res) => {
+ export const createdetails = async (req, res) => {
   try {
     const { name, email, subject, message } = req.body;
 
@@ -17,4 +17,4 @@ const createdetails = async (req, res) => {
 };
 
 
-export default createdetails;
+

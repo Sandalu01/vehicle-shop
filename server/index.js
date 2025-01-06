@@ -22,7 +22,7 @@ app.get('/', async (req, res) => {
 console.log("Hello from node");
 
 
-app.use('api/',contactroute );
+app.use('/api',contactroute );
 
 
 
