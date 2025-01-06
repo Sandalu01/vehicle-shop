@@ -41,6 +41,6 @@ const recipients = [
 //     to: recipients,
 //     subject: "You are awesome!",
 //     html: "Congrats for sending test email with Mailtrap!",
-//     category: "Integration Test",
+//     category: "Integration Test"
 //   })
 //   .then(console.log, console.error);
