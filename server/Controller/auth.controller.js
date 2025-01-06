@@ -2,14 +2,13 @@
 
 import bcryptjs from "bcryptjs";
 import { generateTokenAndSetCookie } from "../utils/generateTokenAndSetCookie.js";
+import { User } from "../Model/User.Model.js"; 
 
 import {
 
 	sendVerificationEmail,
-
-	
-
-} from "../mailtrap/emails.js";
+} 
+from "../mailtrap/emails.js";
 
 
 export const signup = async (req, res) => {
@@ -60,3 +59,4 @@ export const signup = async (req, res) => {
 		res.status(400).json({ success: false, message: error.message });
 	}
 };
+
