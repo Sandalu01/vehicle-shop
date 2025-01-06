@@ -3,7 +3,13 @@
 import bcryptjs from "bcryptjs";
 
 
+import {
 
+	sendVerificationEmail,
+
+	
+
+} from "../mailtrap/emails.js";
 
 
 export const signup = async (req, res) => {
