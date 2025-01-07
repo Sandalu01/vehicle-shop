@@ -11,12 +11,18 @@ import { verifyToken } from "../Middleware/verfifyToken.js";
 
 
 
-router.get("/check-auth", verifyToken);
+router.get("/check-auth", verifyToken, checkAuth);
 
 router.post("/signup",signup);
 
-router.post("/verify-email", verifyEmail);
+router.post("/login",login);
 
 router.post("/logout",logout);
+
+router.post("/verify-email", verifyEmail);
+
+router.post("/forgot-password", forgotPassword);
+
+router.post("/reset-password/:token", resetPassword);
 
 export default router;
