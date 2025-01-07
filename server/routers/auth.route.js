@@ -8,10 +8,10 @@ import {
     forgotPassword,
     resetPassword,
     login,
+    checkAuth
  
 } from "../Controller/auth.controller.js";
 import { verifyToken } from "../Middleware/verfifyToken.js";
-
 
 
 router.get("/check-auth", verifyToken, checkAuth);
@@ -29,3 +29,5 @@ router.post("/forgot-password", forgotPassword);
 router.post("/reset-password/:token", resetPassword);
 
 export default router;
+
+
