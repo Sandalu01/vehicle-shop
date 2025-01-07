@@ -5,6 +5,9 @@ import {
     signup,
     logout,
     verifyEmail,
+    forgotPassword,
+    resetPassword,
+    login,
  
 } from "../Controller/auth.controller.js";
 import { verifyToken } from "../Middleware/verfifyToken.js";
