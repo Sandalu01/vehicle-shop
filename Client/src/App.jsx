@@ -7,11 +7,12 @@ import VehicleDetailsPage from './Components/VehicleDetail';
 import ContactPage from './Pages/ContactPage';
 import Header from './Components/Header';
 import Footer from './Components/Footer'
-import LoginPage from './Pages/LoginPage';
+import Login from './Pages/Login';
 import AuthPage from './Pages/AuthPage';
 import PopularCars from './Cartypes/PopularCars';
 import BestCars from './Cartypes/BestCars';
 import CarModels from './Cartypes/CarModels';
+import LoginPage from './Pages/LoginPage';
 
 const App = () => {
   return (
@@ -24,11 +25,12 @@ const App = () => {
           <Route path="/vehicles" element={<VehiclePage />} />
           <Route path="/vehicles/:id" element={<VehicleDetailsPage />} />
           <Route path="/contact" element={<ContactPage />} />
-          <Route path="/login" element={<LoginPage />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<AuthPage />} />
           <Route path="/best" element={<BestCars />} />
           <Route path="/populer" element={<PopularCars />} />
           <Route path="/model" element={<CarModels/>} />
+          <Route path="/loginpage" element={<LoginPage/>} />
         </Routes>
       </main>
       

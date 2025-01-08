@@ -1,75 +1,96 @@
-import React from 'react';
-import { Container, Row, Col, Form, Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { Mail, Lock, Loader } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Form, Container, Row, Col } from "react-bootstrap";
+import Input from "../Components/Input"; // Assuming you still want to use your custom Input component
+import { useAuthStore } from "../store/authStore";
 
 const LoginPage = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const { login, isLoading, error } = useAuthStore();
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    await login(email, password);
+  };
+
   return (
-    <div className="bg-light text-dark">
-      {/* Hero Section */}
-      <div className="bg-primary text-white text-center py-5">
-        <h1 className="display-4 fw-bold">Login</h1>
-        <p className="lead mt-3">Access your account and manage your preferences.</p>
-      </div>
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="bg-gray-800 bg-opacity-50 backdrop-filter backdrop-blur-xl rounded-2xl shadow-xl overflow-hidden"
+    >
+      <Container className="d-flex justify-content-center align-items-center min-vh-100">
+        <Row className="w-100">
+          <Col md={6} className="mx-auto">
+            <div className="p-4">
+              <h2 className="text-3xl font-bold mb-6 text-center bg-gradient-to-r from-green-400 to-emerald-500 text-transparent bg-clip-text">
+                Welcome Back
+              </h2>
 
-      {/* Login Form Section */}
-      <Container className="py-5">
-        <Row className="justify-content-center">
-          <Col md={6}>
-            <h2 className="text-center mb-4">Welcome Back</h2>
-            <Form>
-              {/* Email Input */}
-              <Form.Group controlId="formEmail" className="mb-3">
-                <Form.Label>Email Address</Form.Label>
-                <Form.Control
-                  type="email"
-                  placeholder="Enter your email"
-                  required
-                />
-              </Form.Group>
+              <Form onSubmit={handleLogin}>
+                {/* Email Input */}
+                <Form.Group controlId="formEmail" className="mb-3">
+                  <Input
+                    icon={Mail}
+                    type="email"
+                    placeholder="Email Address"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                </Form.Group>
 
-              {/* Password Input */}
-              <Form.Group controlId="formPassword" className="mb-3">
-                <Form.Label>Password</Form.Label>
-                <Form.Control
-                  type="password"
-                  placeholder="Enter your password"
-                  required
-                />
-              </Form.Group>
+                {/* Password Input */}
+                <Form.Group controlId="formPassword" className="mb-3">
+                  <Input
+                    icon={Lock}
+                    type="password"
+                    placeholder="Password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                  />
+                </Form.Group>
 
-              {/* Login Button */}
-              <div className="text-center">
-                <Button variant="primary" type="submit">
-                  Login
-                </Button>
-              </div>
-            </Form>
+                {/* Forgot password link */}
+                <div className="d-flex justify-content-end mb-4">
+                  <Link to="/forgot-password" className="text-sm text-green-400 hover:underline">
+                    Forgot password?
+                  </Link>
+                </div>
+
+                {/* Error message */}
+                {error && <p className="text-danger font-semibold mb-2">{error}</p>}
+
+                {/* Login Button */}
+                <motion.button
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="w-100 py-3 px-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-bold rounded-lg shadow-lg hover:from-green-600 hover:to-emerald-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 focus:ring-offset-gray-900 transition duration-200"
+                  type="submit"
+                  disabled={isLoading}
+                >
+                  {isLoading ? <Loader className="w-6 h-6 animate-spin mx-auto" /> : "Login"}
+                </motion.button>
+              </Form>
+            </div>
+
+            {/* Sign Up Link */}
+            <div className="px-4 py-3 bg-gray-900 bg-opacity-50 text-center">
+              <p className="text-sm text-gray-400">
+                Don't have an account?{" "}
+                <Link to="/signup" className="text-green-400 hover:underline">
+                  Sign up
+                </Link>
+              </p>
+            </div>
           </Col>
         </Row>
       </Container>
-
-      {/* Additional Info Section */}
-      <div className="bg-secondary text-white py-4">
-        <Container>
-          <Row>
-            <Col className="text-center">
-            <p>
-  Don't have an account?{' '}
-  <Link to="/signup" className="text-white fw-bold">
-    Sign up here
-  </Link>.
-</p>
-<p>
-  Forgot your password?{' '}
-  <Link to="/forgot-password" className="text-white fw-bold">
-    Reset it
-  </Link>.
-</p>
-            </Col>
-          </Row>
-        </Container>
-      </div>
-    </div>
+    </motion.div>
   );
 };
 
