@@ -8,11 +8,11 @@ import ContactPage from './Pages/ContactPage';
 import Header from './Components/Header';
 import Footer from './Components/Footer'
 import Login from './Pages/Login';
-import AuthPage from './Pages/AuthPage';
 import PopularCars from './Cartypes/PopularCars';
 import BestCars from './Cartypes/BestCars';
 import CarModels from './Cartypes/CarModels';
 import LoginPage from './Pages/LoginPage';
+import SignUpPage from './Pages/SignUpPage';
 
 const App = () => {
   return (
@@ -26,7 +26,7 @@ const App = () => {
           <Route path="/vehicles/:id" element={<VehicleDetailsPage />} />
           <Route path="/contact" element={<ContactPage />} />
           {/* <Route path="/login" element={<Login />} /> */}
-          <Route path="/signup" element={<AuthPage />} />
+          <Route path="/signup" element={<SignUpPage />} />
           <Route path="/best" element={<BestCars />} />
           <Route path="/populer" element={<PopularCars />} />
           <Route path="/model" element={<CarModels/>} />
