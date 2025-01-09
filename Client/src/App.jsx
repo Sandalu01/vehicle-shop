@@ -13,6 +13,7 @@ import BestCars from './Cartypes/BestCars';
 import CarModels from './Cartypes/CarModels';
 import LoginPage from './Pages/LoginPage';
 import SignUpPage from './Pages/SignUpPage';
+import EmailVerificationPage from './Pages/EmailVerificationPage';
 
 const App = () => {
   return (
@@ -31,6 +32,7 @@ const App = () => {
           <Route path="/populer" element={<PopularCars />} />
           <Route path="/model" element={<CarModels/>} />
           <Route path="/loginpage" element={<LoginPage/>} />
+          <Route path="/verify-email" element={<EmailVerificationPage/>} />
         </Routes>
       </main>
       
