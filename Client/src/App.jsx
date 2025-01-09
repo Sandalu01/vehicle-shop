@@ -14,6 +14,7 @@ import CarModels from './Cartypes/CarModels';
 import LoginPage from './Pages/LoginPage';
 import SignUpPage from './Pages/SignUpPage';
 import EmailVerificationPage from './Pages/EmailVerificationPage';
+import ForgotPasswordPage from './Pages/ForgotPasswordPage';
 
 const App = () => {
   return (
@@ -33,6 +34,7 @@ const App = () => {
           <Route path="/model" element={<CarModels/>} />
           <Route path="/loginpage" element={<LoginPage/>} />
           <Route path="/verify-email" element={<EmailVerificationPage/>} />
+          <Route path="/forgot-password" element={<ForgotPasswordPage/>} />
         </Routes>
       </main>
       
