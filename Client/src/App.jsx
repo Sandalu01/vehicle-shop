@@ -15,6 +15,7 @@ import LoginPage from './Pages/LoginPage';
 import SignUpPage from './Pages/SignUpPage';
 import EmailVerificationPage from './Pages/EmailVerificationPage';
 import ForgotPasswordPage from './Pages/ForgotPasswordPage';
+import ResetPasswordPage from './Pages/ResetPasswordPage';
 
 const App = () => {
   return (
@@ -35,6 +36,7 @@ const App = () => {
           <Route path="/loginpage" element={<LoginPage/>} />
           <Route path="/verify-email" element={<EmailVerificationPage/>} />
           <Route path="/forgot-password" element={<ForgotPasswordPage/>} />
+          <Route path="/reset-password/:token" element={<ResetPasswordPage/>} />
         </Routes>
       </main>
       
