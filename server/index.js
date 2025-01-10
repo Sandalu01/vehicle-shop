@@ -5,7 +5,6 @@ import cors from 'cors';
 import {connectDB} from './DB/connectDB.js';
 import contactroute from './routers/contact.route.js';
 import authroutes from "./routers/auth.route.js";
-
 import cookieParser from "cookie-parser";
 
 dotenv.config();  // it reads the.env file and sets the environment variables.
