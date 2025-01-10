@@ -16,7 +16,8 @@ app.use(bodyParser.json());
 app.use(cors());
 
 
-app.use(cors({ origin: "http://localhost:5173", credentials: true })); 
+app.use(cors({ 
+  origin: "http://localhost:5173", credentials: true })); 
 // not defined  frontend cores  and back end 
 
 app.use(express.json()); // allows us to parse incoming requests:req.body
